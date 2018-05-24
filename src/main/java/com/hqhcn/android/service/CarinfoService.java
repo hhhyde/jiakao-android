@@ -1,7 +1,7 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.entity.CarinfoExample;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.entity.CarinfoExample;
 
 import java.util.List;
 

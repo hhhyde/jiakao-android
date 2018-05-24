@@ -1,12 +1,12 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.KsldMapper;
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.entity.CarinfoExample;
-import com.hqh.android.entity.Ksld;
-import com.hqh.android.entity.KsldExample;
-import com.hqh.android.service.CarinfoService;
-import com.hqh.android.service.KsldService;
+import com.hqhcn.android.dao.KsldMapper;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.entity.CarinfoExample;
+import com.hqhcn.android.entity.Ksld;
+import com.hqhcn.android.entity.KsldExample;
+import com.hqhcn.android.service.CarinfoService;
+import com.hqhcn.android.service.KsldService;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

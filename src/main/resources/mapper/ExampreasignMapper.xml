@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.ExampreasignMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Exampreasign">
+<mapper namespace="com.hqhcn.android.dao.ExampreasignMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Exampreasign">
     <id column="lsh" jdbcType="VARCHAR" property="lsh" />
     <result column="kskm" jdbcType="VARCHAR" property="kskm" />
     <result column="zkzmbh" jdbcType="VARCHAR" property="zkzmbh" />
@@ -132,7 +132,7 @@
     scyzzt, kcdddh, zw, signature, print_zt, yyrq, ksrq, pxshrq, zkykrq, csrq, ykrq,
     bdsj, fpsj, kskssj, ksjssj, cjscsj, jlcxh, hphm, ksld
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.ExampreasignExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.ExampreasignExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -157,13 +157,13 @@
     delete from exampreasign
     where lsh = #{lsh,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.ExampreasignExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.ExampreasignExample">
     delete from exampreasign
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Exampreasign">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Exampreasign">
     insert into exampreasign (lsh, kskm, zkzmbh,
     sfzmmc, sfzmhm, xm,
     ksyy, xxsj, kscx, kscc,
@@ -203,7 +203,7 @@
     #{cjscsj,jdbcType=TIMESTAMP}, #{jlcxh,jdbcType=VARCHAR}, #{hphm,jdbcType=VARCHAR},
     #{ksld,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Exampreasign">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Exampreasign">
     insert into exampreasign
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="lsh != null">
@@ -594,7 +594,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.ExampreasignExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.ExampreasignExample" resultType="java.lang.Long">
     select count(*) from exampreasign
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -870,7 +870,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Exampreasign">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Exampreasign">
     update exampreasign
     <set>
       <if test="kskm != null">
@@ -1065,7 +1065,7 @@
     </set>
     where lsh = #{lsh,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Exampreasign">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Exampreasign">
     update exampreasign
     set kskm = #{kskm,jdbcType=VARCHAR},
     zkzmbh = #{zkzmbh,jdbcType=VARCHAR},
@@ -1134,7 +1134,7 @@
   </update>
 
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.ExampreasignExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.ExampreasignExample" resultMap="BaseResultMap">
     select * from  exampreasign
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -1145,7 +1145,7 @@
     limit #{start,jdbcType=DECIMAL},#{limit,jdbcType=DECIMAL}
   </select>
 
-  <select id="queryToPage1" parameterType="com.hqh.android.entity.ExampreasignExample" resultMap="BaseResultMap">
+  <select id="queryToPage1" parameterType="com.hqhcn.android.entity.ExampreasignExample" resultMap="BaseResultMap">
     select XM,LSH,SFZMHM,ZKZMBH from  exampreasign
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

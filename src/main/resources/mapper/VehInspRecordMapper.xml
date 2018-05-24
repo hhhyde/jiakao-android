@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.VehInspRecordMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.VehInspRecord">
+<mapper namespace="com.hqhcn.android.dao.VehInspRecordMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.VehInspRecord">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="jlcxh" jdbcType="VARCHAR" property="jlcxh" />
     <result column="kcdddh" jdbcType="VARCHAR" property="kcdddh" />
@@ -74,7 +74,7 @@
   <sql id="Base_Column_List">
     id, jlcxh, kcdddh, hphm, jlczt, hpzl, jklx, kskm, sj, msg
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.VehInspRecordExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.VehInspRecordExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -99,13 +99,13 @@
     delete from veh_insp_record
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.VehInspRecordExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.VehInspRecordExample">
     delete from veh_insp_record
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.VehInspRecord">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.VehInspRecord">
     insert into veh_insp_record (id, jlcxh, kcdddh,
     hphm, jlczt, hpzl,
     jklx, kskm, sj, msg
@@ -115,7 +115,7 @@
     #{jklx,jdbcType=VARCHAR}, #{kskm,jdbcType=VARCHAR}, #{sj,jdbcType=TIMESTAMP}, #{msg,jdbcType=VARCHAR}
     )
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.VehInspRecord">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.VehInspRecord">
     insert into veh_insp_record
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -182,7 +182,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.VehInspRecordExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.VehInspRecordExample" resultType="java.lang.Long">
     select count(*) from veh_insp_record
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -242,7 +242,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.VehInspRecord">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.VehInspRecord">
     update veh_insp_record
     <set>
       <if test="jlcxh != null">
@@ -275,7 +275,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.VehInspRecord">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.VehInspRecord">
     update veh_insp_record
     set jlcxh = #{jlcxh,jdbcType=VARCHAR},
     kcdddh = #{kcdddh,jdbcType=VARCHAR},
@@ -290,7 +290,7 @@
   </update>
 
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.VehInspRecordExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.VehInspRecordExample" resultMap="BaseResultMap">
     select * from veh_insp_record
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

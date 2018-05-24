@@ -1,7 +1,7 @@
 package com.hqhcn.android.tool;
 
 
-import com.hqh.android.web.InitLoad;
+import com.hqhcn.android.web.InitLoad;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

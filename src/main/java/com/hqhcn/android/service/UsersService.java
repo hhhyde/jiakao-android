@@ -1,7 +1,7 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.Users;
-import com.hqh.android.entity.UsersExample;
+import com.hqhcn.android.entity.Users;
+import com.hqhcn.android.entity.UsersExample;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.util.List;

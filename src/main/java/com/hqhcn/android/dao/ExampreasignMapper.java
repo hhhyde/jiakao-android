@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Exampreasign;
-import com.hqh.android.entity.ExampreasignExample;
+import com.hqhcn.android.entity.Exampreasign;
+import com.hqhcn.android.entity.ExampreasignExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

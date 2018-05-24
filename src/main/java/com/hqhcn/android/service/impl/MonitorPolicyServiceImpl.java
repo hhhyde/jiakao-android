@@ -1,10 +1,10 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.MonitorPolicyMapper;
-import com.hqh.android.entity.MonitorPolicy;
-import com.hqh.android.entity.MonitorPolicyExample;
-import com.hqh.android.service.MonitorPolicyService;
-import com.hqh.android.tool.AttrUtils;
+import com.hqhcn.android.dao.MonitorPolicyMapper;
+import com.hqhcn.android.entity.MonitorPolicy;
+import com.hqhcn.android.entity.MonitorPolicyExample;
+import com.hqhcn.android.service.MonitorPolicyService;
+import com.hqhcn.android.tool.AttrUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

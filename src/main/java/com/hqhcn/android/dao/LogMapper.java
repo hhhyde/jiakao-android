@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Log;
-import com.hqh.android.entity.LogExample;
+import com.hqhcn.android.entity.Log;
+import com.hqhcn.android.entity.LogExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

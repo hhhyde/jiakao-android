@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.CarinfoMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Carinfo">
+<mapper namespace="com.hqhcn.android.dao.CarinfoMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Carinfo">
     <id column="jlcxh" jdbcType="VARCHAR" property="jlcxh" />
     <id column="kcdddh" jdbcType="VARCHAR" property="kcdddh" />
     <result column="hpzl" jdbcType="VARCHAR" property="hpzl" />
@@ -110,7 +110,7 @@
     serial_port2_linux, ccdjrq, qzbfqz, cjsj, gxsj, assign_time, type, audio_nvr_IP,
     audio_nvr_port, audio_nvr_account, audio_nvr_password, audio_nvr_channel
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.CarinfoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.CarinfoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -125,25 +125,25 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.hqh.android.entity.CarinfoKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="com.hqhcn.android.entity.CarinfoKey" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from carinfo
     where jlcxh = #{jlcxh,jdbcType=VARCHAR}
     and kcdddh = #{kcdddh,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.hqh.android.entity.CarinfoKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.hqhcn.android.entity.CarinfoKey">
     delete from carinfo
     where jlcxh = #{jlcxh,jdbcType=VARCHAR}
     and kcdddh = #{kcdddh,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.CarinfoExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.CarinfoExample">
     delete from carinfo
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Carinfo">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Carinfo">
     insert into carinfo (jlcxh, kcdddh, hpzl,
     hphm, jklx, clppxh,
     fzjg, jlczt, bj, jbr,
@@ -173,7 +173,7 @@
     #{audioNvrAccount,jdbcType=VARCHAR}, #{audioNvrPassword,jdbcType=VARCHAR}, #{audioNvrChannel,jdbcType=VARCHAR}
     )
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Carinfo">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Carinfo">
     insert into carinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="jlcxh != null">
@@ -432,7 +432,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.CarinfoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.CarinfoExample" resultType="java.lang.Long">
     select count(*) from carinfo
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -620,7 +620,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Carinfo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Carinfo">
     update carinfo
     <set>
       <if test="hpzl != null">
@@ -747,7 +747,7 @@
     where jlcxh = #{jlcxh,jdbcType=VARCHAR}
     and kcdddh = #{kcdddh,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Carinfo">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Carinfo">
     update carinfo
     set hpzl = #{hpzl,jdbcType=VARCHAR},
     hphm = #{hphm,jdbcType=VARCHAR},
@@ -795,7 +795,7 @@
 
 
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.CarinfoExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.CarinfoExample" resultMap="BaseResultMap">
     select * from carinfo
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -806,7 +806,7 @@
     limit #{start,jdbcType=DECIMAL},#{limit,jdbcType=DECIMAL}
   </select>
 
-  <select id="selectJLCXHByExample" parameterType="com.hqh.android.entity.NvrInfoExample" resultType="java.lang.String">
+  <select id="selectJLCXHByExample" parameterType="com.hqhcn.android.entity.NvrInfoExample" resultType="java.lang.String">
     select jlcxh from carinfo
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

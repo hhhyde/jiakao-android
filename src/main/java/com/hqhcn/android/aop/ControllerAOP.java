@@ -1,11 +1,10 @@
 package com.hqhcn.android.aop;
 
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.service.CarinfoService;
-import com.hqh.android.tool.DateTools;
-import com.hqh.android.tool.ResultUtils;
-import com.hqh.android.web.AndroidController;
-import com.hqh.android.web.BaseController;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.service.CarinfoService;
+import com.hqhcn.android.tool.DateTools;
+import com.hqhcn.android.tool.ResultUtils;
+import com.hqhcn.android.web.BaseController;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.JWSObject;
 import com.nimbusds.jose.JWSVerifier;
@@ -53,15 +52,15 @@ public class ControllerAOP {
     /**
      * 切入web.AndroidController底下的<code>非私有</code>方法
      */
-    @Pointcut("execution(* com.hqh.android.web.AndroidController.*(..)) && @annotation(com.hqh.android.aop.CheckIP)")
+    @Pointcut("execution(* com.hqhcn.android.web.AndroidController.*(..)) && @annotation(com.hqhcn.android.aop.CheckIP)")
     public void controllerMethod() {
     }
 
     /**
-     * 切入<code>com.hqh.android.service.AndroidService</code>里面
+     * 切入<code>AndroidService</code>里面
      * 所有<code>第一个参数名为token,最后一个参数名为ip</code>的<code>非私有</code>方法
      */
-    @Pointcut("execution(* com.hqh.android.service.AndroidService.*(..)) && args(token,..,ip)")
+    @Pointcut("execution(* com.hqhcn.android.service.AndroidService.*(..)) && args(token,..,ip)")
     public void argsContainToken(String token, String ip) {
     }
 

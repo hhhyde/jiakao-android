@@ -1,8 +1,8 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Gps;
-import com.hqh.android.entity.GpsExample;
-import com.hqh.android.entity.GpsKey;
+import com.hqhcn.android.entity.Gps;
+import com.hqhcn.android.entity.GpsExample;
+import com.hqhcn.android.entity.GpsKey;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

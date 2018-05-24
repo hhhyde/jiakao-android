@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.VehInspRecord;
-import com.hqh.android.entity.VehInspRecordExample;
+import com.hqhcn.android.entity.VehInspRecord;
+import com.hqhcn.android.entity.VehInspRecordExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,19 +1,19 @@
 package com.hqhcn.android.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hqh.android.dao.ExampreasignMapper;
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.entity.Exampreasign;
-import com.hqh.android.entity.ExampreasignExample;
-import com.hqh.android.entity.Ksld;
-import com.hqh.android.service.CarinfoService;
-import com.hqh.android.service.ExamProcService;
-import com.hqh.android.service.ExamineeService;
-import com.hqh.android.service.KsldService;
-import com.hqh.android.tool.AttrUtils;
-import com.hqh.android.tool.DateTools;
-import com.hqh.android.web.InitLoad;
-import com.hqh.android.webservice.TmriInvoker;
+import com.hqhcn.android.dao.ExampreasignMapper;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.entity.Exampreasign;
+import com.hqhcn.android.entity.ExampreasignExample;
+import com.hqhcn.android.entity.Ksld;
+import com.hqhcn.android.service.CarinfoService;
+import com.hqhcn.android.service.ExamProcService;
+import com.hqhcn.android.service.ExamineeService;
+import com.hqhcn.android.service.KsldService;
+import com.hqhcn.android.tool.AttrUtils;
+import com.hqhcn.android.tool.DateTools;
+import com.hqhcn.android.web.InitLoad;
+import com.hqhcn.android.webservice.TmriInvoker;
 import org.apache.commons.lang.time.DateUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -116,7 +116,7 @@ public class ExamineeServiceImpl implements ExamineeService {
         // 重置考试次数
         Exampreasign exampreasign = queryByLsh(lsh);
 
-        exampreasign.setKscs(ExamineeService.KSCS_INIT);
+        exampreasign.setKscs(KSCS_INIT);
         exampreasign.setKscj(null);
         exampreasign.setFpsj(null);
         exampreasign.setZt(ZT_UNASSIGN);
@@ -154,7 +154,7 @@ public class ExamineeServiceImpl implements ExamineeService {
         Exampreasign exampreasign = new Exampreasign();
         exampreasign.setLsh(lsh);
         exampreasign.setZt(zt);
-        exampreasign.setF1(ExamineeService.F1_EXAMBEGINNING);
+        exampreasign.setF1(F1_EXAMBEGINNING);
         updateByPrimaryKeySelective(exampreasign);
     }
 
@@ -162,7 +162,7 @@ public class ExamineeServiceImpl implements ExamineeService {
     @Transactional
     public void insert(Exampreasign entity) {
         if (null == entity.getKscs()) {
-            entity.setKscs(ExamineeService.KSCS_INIT);
+            entity.setKscs(KSCS_INIT);
         }
         if (StringUtils.isEmpty(entity.getF1())){
             entity.setF1("0");

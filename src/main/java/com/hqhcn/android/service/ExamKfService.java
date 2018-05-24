@@ -1,7 +1,7 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.ExamKf;
-import com.hqh.android.entity.ExamKfExample;
+import com.hqhcn.android.entity.ExamKf;
+import com.hqhcn.android.entity.ExamKfExample;
 
 import java.util.List;
 

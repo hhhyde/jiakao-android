@@ -1,9 +1,9 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.CarmodelMapper;
-import com.hqh.android.entity.*;
-import com.hqh.android.service.CarModelService;
-import com.hqh.android.service.CarinfoService;
+import com.hqhcn.android.dao.CarmodelMapper;
+import com.hqhcn.android.entity.*;
+import com.hqhcn.android.service.CarModelService;
+import com.hqhcn.android.service.CarinfoService;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

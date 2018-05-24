@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.NvrInfo;
-import com.hqh.android.entity.NvrInfoExample;
+import com.hqhcn.android.entity.NvrInfo;
+import com.hqhcn.android.entity.NvrInfoExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

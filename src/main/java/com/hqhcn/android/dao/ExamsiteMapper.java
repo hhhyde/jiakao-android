@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Examsite;
-import com.hqh.android.entity.ExamsiteExample;
+import com.hqhcn.android.entity.Examsite;
+import com.hqhcn.android.entity.ExamsiteExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

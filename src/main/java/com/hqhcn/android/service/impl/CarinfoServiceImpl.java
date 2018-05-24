@@ -1,14 +1,13 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.CarinfoMapper;
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.entity.CarinfoExample;
-import com.hqh.android.entity.Exampreasign;
-import com.hqh.android.entity.ExampreasignExample;
-import com.hqh.android.service.CarinfoService;
-import com.hqh.android.service.ExamineeService;
-import com.hqh.android.tool.AttrUtils;
-import com.hqh.android.web.InitLoad;
+import com.hqhcn.android.dao.CarinfoMapper;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.entity.CarinfoExample;
+import com.hqhcn.android.entity.Exampreasign;
+import com.hqhcn.android.entity.ExampreasignExample;
+import com.hqhcn.android.service.CarinfoService;
+import com.hqhcn.android.service.ExamineeService;
+import com.hqhcn.android.web.InitLoad;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,7 +60,7 @@ public class CarinfoServiceImpl implements CarinfoService {
     @Override
     @Transactional
     public void update(Carinfo entity) {
-        if (CarinfoService.ZT_UNUSABLE.equals(entity.getJlczt())){
+        if (ZT_UNUSABLE.equals(entity.getJlczt())){
             breakdown(entity.getJlcxh());
         }
 

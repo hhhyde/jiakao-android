@@ -2,12 +2,12 @@ package com.hqhcn.android.web;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.hqh.android.entity.*;
-import com.hqh.android.service.*;
-import com.hqh.android.tool.AttrUtils;
-import com.hqh.android.tool.DateTools;
-import com.hqh.android.tool.LogType;
-import com.hqh.android.tool.swagger.annotation.SwaggerShow;
+import com.hqhcn.android.entity.*;
+import com.hqhcn.android.service.*;
+import com.hqhcn.android.tool.AttrUtils;
+import com.hqhcn.android.tool.DateTools;
+import com.hqhcn.android.tool.LogType;
+import com.hqhcn.android.tool.swagger.annotation.SwaggerShow;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

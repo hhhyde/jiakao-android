@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.CameraInfo;
-import com.hqh.android.entity.CameraInfoExample;
+import com.hqhcn.android.entity.CameraInfo;
+import com.hqhcn.android.entity.CameraInfoExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.MonitorPolicy;
-import com.hqh.android.entity.MonitorPolicyExample;
+import com.hqhcn.android.entity.MonitorPolicy;
+import com.hqhcn.android.entity.MonitorPolicyExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

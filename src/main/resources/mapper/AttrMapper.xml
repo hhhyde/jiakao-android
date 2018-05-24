@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.AttrMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Attr">
+<mapper namespace="com.hqhcn.android.dao.AttrMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Attr">
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="value" jdbcType="VARCHAR" property="value" />
     <result column="kcdddh" jdbcType="VARCHAR" property="kcdddh" />
@@ -68,7 +68,7 @@
   <sql id="Base_Column_List">
     name, value, kcdddh, bz
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.AttrExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.AttrExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -83,19 +83,19 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.AttrExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.AttrExample">
     delete from attr
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Attr">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Attr">
     insert into attr (name, value, kcdddh,
     bz)
     values (#{name,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, #{kcdddh,jdbcType=VARCHAR},
     #{bz,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Attr">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Attr">
     insert into attr
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">
@@ -126,7 +126,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.AttrExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.AttrExample" resultType="java.lang.Long">
     select count(*) from attr
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -164,7 +164,7 @@
   </update>
 
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.AttrExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.AttrExample" resultMap="BaseResultMap">
     select * from attr
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

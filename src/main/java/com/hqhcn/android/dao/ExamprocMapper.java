@@ -1,8 +1,8 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Examproc;
-import com.hqh.android.entity.ExamprocExample;
-import com.hqh.android.entity.ExamprocKey;
+import com.hqhcn.android.entity.Examproc;
+import com.hqhcn.android.entity.ExamprocExample;
+import com.hqhcn.android.entity.ExamprocKey;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

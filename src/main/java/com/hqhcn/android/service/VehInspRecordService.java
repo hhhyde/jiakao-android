@@ -1,7 +1,7 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.VehInspRecord;
-import com.hqh.android.entity.VehInspRecordExample;
+import com.hqhcn.android.entity.VehInspRecord;
+import com.hqhcn.android.entity.VehInspRecordExample;
 
 import java.util.List;
 

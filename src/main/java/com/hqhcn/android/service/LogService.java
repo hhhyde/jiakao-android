@@ -1,9 +1,9 @@
 package com.hqhcn.android.service;
 
 
-import com.hqh.android.entity.Log;
-import com.hqh.android.entity.LogExample;
-import com.hqh.android.tool.LogType;
+import com.hqhcn.android.entity.Log;
+import com.hqhcn.android.entity.LogExample;
+import com.hqhcn.android.tool.LogType;
 
 import java.util.List;
 

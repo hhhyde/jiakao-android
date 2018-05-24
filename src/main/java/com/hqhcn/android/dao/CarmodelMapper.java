@@ -1,8 +1,8 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Carmodel;
-import com.hqh.android.entity.CarmodelExample;
-import com.hqh.android.entity.CarmodelKey;
+import com.hqhcn.android.entity.Carmodel;
+import com.hqhcn.android.entity.CarmodelExample;
+import com.hqhcn.android.entity.CarmodelKey;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.ExamsiteMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Examsite">
+<mapper namespace="com.hqhcn.android.dao.ExamsiteMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Examsite">
     <id column="KCDDDH" jdbcType="VARCHAR" property="kcdddh" />
     <result column="KCMC" jdbcType="VARCHAR" property="kcmc" />
     <result column="CKSBS" jdbcType="DECIMAL" property="cksbs" />
@@ -109,7 +109,7 @@
     F1, F2, F3, F4, F5, SBZT, JGR, JGR2, CKCS, JKURL, JKXLH, zdysrq, cjsj, gxrq, zklwrq,
     cklwrq, jgjssj, jgkssj
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.ExamsiteExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.ExamsiteExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -134,13 +134,13 @@
     delete from examsite
     where KCDDDH = #{kcdddh,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.ExamsiteExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.ExamsiteExample">
     delete from examsite
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Examsite">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Examsite">
     insert into examsite (KCDDDH, KCMC, CKSBS,
     CSBJ, KSXM, YWLX, XH,
     FZJG, GLBM, KSKM, KKCX,
@@ -168,7 +168,7 @@
     #{gxrq,jdbcType=TIMESTAMP}, #{zklwrq,jdbcType=TIMESTAMP}, #{cklwrq,jdbcType=TIMESTAMP},
     #{jgjssj,jdbcType=TIMESTAMP}, #{jgkssj,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Examsite">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Examsite">
     insert into examsite
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="kcdddh != null">
@@ -427,7 +427,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.ExamsiteExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.ExamsiteExample" resultType="java.lang.Long">
     select count(*) from examsite
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -615,7 +615,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Examsite">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Examsite">
     update examsite
     <set>
       <if test="kcmc != null">
@@ -744,7 +744,7 @@
     </set>
     where KCDDDH = #{kcdddh,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Examsite">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Examsite">
     update examsite
     set KCMC = #{kcmc,jdbcType=VARCHAR},
     CKSBS = #{cksbs,jdbcType=DECIMAL},
@@ -790,7 +790,7 @@
     where KCDDDH = #{kcdddh,jdbcType=VARCHAR}
   </update>
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.ExamsiteExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.ExamsiteExample" resultMap="BaseResultMap">
     select * from  examsite
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

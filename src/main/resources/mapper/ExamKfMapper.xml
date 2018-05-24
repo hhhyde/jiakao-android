@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.ExamKfMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.ExamKf">
+<mapper namespace="com.hqhcn.android.dao.ExamKfMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.ExamKf">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="lsh" jdbcType="VARCHAR" property="lsh" />
     <result column="kskm" jdbcType="VARCHAR" property="kskm" />
@@ -74,7 +74,7 @@
   <sql id="Base_Column_List">
     id, lsh, kskm, ksxm, kfxm, sfzmhm, kscs, kfz, pic, kfsj
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.ExamKfExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.ExamKfExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -99,13 +99,13 @@
     delete from exam_kf
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.ExamKfExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.ExamKfExample">
     delete from exam_kf
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.ExamKf">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.ExamKf">
     insert into exam_kf (id, lsh, kskm,
     ksxm, kfxm, sfzmhm,
     kscs, kfz, pic, kfsj
@@ -115,7 +115,7 @@
     #{kscs,jdbcType=DECIMAL}, #{kfz,jdbcType=DECIMAL}, #{pic,jdbcType=VARCHAR}, #{kfsj,jdbcType=TIMESTAMP}
     )
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.ExamKf">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.ExamKf">
     insert into exam_kf
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -182,7 +182,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.ExamKfExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.ExamKfExample" resultType="java.lang.Long">
     select count(*) from exam_kf
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -242,7 +242,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.ExamKf">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.ExamKf">
     update exam_kf
     <set>
       <if test="lsh != null">
@@ -275,7 +275,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.ExamKf">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.ExamKf">
     update exam_kf
     set lsh = #{lsh,jdbcType=VARCHAR},
       kskm = #{kskm,jdbcType=VARCHAR},

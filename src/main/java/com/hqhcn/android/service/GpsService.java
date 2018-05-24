@@ -1,8 +1,8 @@
 package com.hqhcn.android.service;
 
 
-import com.hqh.android.entity.Gps;
-import com.hqh.android.entity.GpsExample;
+import com.hqhcn.android.entity.Gps;
+import com.hqhcn.android.entity.GpsExample;
 
 import java.util.Date;
 import java.util.List;

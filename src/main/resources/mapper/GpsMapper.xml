@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.GpsMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Gps">
+<mapper namespace="com.hqhcn.android.dao.GpsMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Gps">
     <id column="ksxm" jdbcType="VARCHAR" property="ksxm" />
     <id column="ks_lsh" jdbcType="VARCHAR" property="ksLsh" />
     <id column="kscs" jdbcType="INTEGER" property="kscs" />
     <result column="kskm" jdbcType="VARCHAR" property="kskm" />
     <result column="carinfo_id" jdbcType="VARCHAR" property="carinfoId" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hqh.android.entity.Gps">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hqhcn.android.entity.Gps">
     <result column="gps" jdbcType="LONGVARCHAR" property="gps" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -75,7 +75,7 @@
   <sql id="Blob_Column_List">
     gps
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.hqh.android.entity.GpsExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.hqhcn.android.entity.GpsExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -92,7 +92,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.GpsExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.GpsExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -107,7 +107,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.hqh.android.entity.GpsKey" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="com.hqhcn.android.entity.GpsKey" resultMap="ResultMapWithBLOBs">
     select
     <include refid="Base_Column_List" />
     ,
@@ -117,19 +117,19 @@
     and ks_lsh = #{ksLsh,jdbcType=VARCHAR}
     and kscs = #{kscs,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.hqh.android.entity.GpsKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.hqhcn.android.entity.GpsKey">
     delete from gps
     where ksxm = #{ksxm,jdbcType=VARCHAR}
     and ks_lsh = #{ksLsh,jdbcType=VARCHAR}
     and kscs = #{kscs,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.GpsExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.GpsExample">
     delete from gps
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Gps">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Gps">
     insert into gps (ksxm, ks_lsh, kscs,
     kskm, carinfo_id, gps
     )
@@ -137,7 +137,7 @@
     #{kskm,jdbcType=VARCHAR}, #{carinfoId,jdbcType=VARCHAR}, #{gps,jdbcType=LONGVARCHAR}
     )
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Gps">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Gps">
     insert into gps
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="ksxm != null">
@@ -180,7 +180,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.GpsExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.GpsExample" resultType="java.lang.Long">
     select count(*) from gps
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -235,7 +235,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Gps">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Gps">
     update gps
     <set>
       <if test="kskm != null">
@@ -252,7 +252,7 @@
     and ks_lsh = #{ksLsh,jdbcType=VARCHAR}
     and kscs = #{kscs,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.hqh.android.entity.Gps">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.hqhcn.android.entity.Gps">
     update gps
     set kskm = #{kskm,jdbcType=VARCHAR},
     carinfo_id = #{carinfoId,jdbcType=VARCHAR},
@@ -261,7 +261,7 @@
     and ks_lsh = #{ksLsh,jdbcType=VARCHAR}
     and kscs = #{kscs,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Gps">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Gps">
     update gps
     set kskm = #{kskm,jdbcType=VARCHAR},
     carinfo_id = #{carinfoId,jdbcType=VARCHAR}
@@ -269,7 +269,7 @@
     and ks_lsh = #{ksLsh,jdbcType=VARCHAR}
     and kscs = #{kscs,jdbcType=INTEGER}
   </update>
-  <update id="appendGPSByPrimaryKey" parameterType="com.hqh.android.entity.Gps">
+  <update id="appendGPSByPrimaryKey" parameterType="com.hqhcn.android.entity.Gps">
     update gps
     set gps =  #{gps,jdbcType=VARCHAR}
     where ksxm = #{ksxm,jdbcType=VARCHAR}

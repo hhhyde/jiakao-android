@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.KsldMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Ksld">
+<mapper namespace="com.hqhcn.android.dao.KsldMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Ksld">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="bz" jdbcType="VARCHAR" property="bz" />
@@ -75,7 +75,7 @@
   <sql id="Base_Column_List">
     id, name, bz, ksxmpx, kskm, kcdddh, model_path, zt, lc, pic, gxsj
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.KsldExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.KsldExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -100,13 +100,13 @@
     delete from ksld
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.KsldExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.KsldExample">
     delete from ksld
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
       .android</if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Ksld">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Ksld">
     insert into ksld (id, name, bz,
     ksxmpx, kskm, kcdddh,
     model_path, zt, lc,
@@ -116,7 +116,7 @@
     #{modelPath,jdbcType=VARCHAR}, #{zt,jdbcType=DECIMAL}, #{lc,jdbcType=DECIMAL},
     #{pic,jdbcType=VARCHAR}, #{gxsj,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Ksld">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Ksld">
     insert into ksld
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -189,7 +189,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.KsldExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.KsldExample" resultType="java.lang.Long">
     select count(*) from ksld
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -253,7 +253,7 @@
       <include refid="Update_By_Example_Where_Clause" />
       .android</if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Ksld">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Ksld">
     update ksld
     <set>
       <if test="name != null">
@@ -289,7 +289,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Ksld">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Ksld">
     update ksld
     set name = #{name,jdbcType=VARCHAR},
     bz = #{bz,jdbcType=VARCHAR},
@@ -304,7 +304,7 @@
     where id = #{id,jdbcType=VARCHAR}
   </update>
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.KsldExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.KsldExample" resultMap="BaseResultMap">
     select * from  ksld
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

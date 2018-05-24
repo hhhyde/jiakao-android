@@ -1,14 +1,17 @@
 package com.hqhcn.android.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hqh.android.dao.GpsMapper;
-import com.hqh.android.entity.Exampreasign;
-import com.hqh.android.entity.Gps;
-import com.hqh.android.entity.GpsExample;
-import com.hqh.android.service.*;
-import com.hqh.android.tool.AttrUtils;
-import com.hqh.android.tool.DateTools;
-import com.hqh.android.webservice.TmriInvoker;
+import com.hqhcn.android.dao.GpsMapper;
+import com.hqhcn.android.entity.Exampreasign;
+import com.hqhcn.android.entity.Gps;
+import com.hqhcn.android.entity.GpsExample;
+import com.hqhcn.android.tool.AttrUtils;
+import com.hqhcn.android.tool.DateTools;
+import com.hqhcn.android.webservice.TmriInvoker;
+import com.hqhcn.android.service.ExamProcService;
+import com.hqhcn.android.service.ExamineeService;
+import com.hqhcn.android.service.GpsService;
+import com.hqhcn.android.service.KsxmService;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.time.DateUtils;
 import org.slf4j.Logger;

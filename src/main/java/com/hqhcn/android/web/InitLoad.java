@@ -1,9 +1,9 @@
 package com.hqhcn.android.web;
 
-import com.hqh.android.dao.AttrMapper;
-import com.hqh.android.entity.*;
-import com.hqh.android.service.*;
-import com.hqh.android.tool.AttrUtils;
+import com.hqhcn.android.dao.AttrMapper;
+import com.hqhcn.android.entity.*;
+import com.hqhcn.android.service.*;
+import com.hqhcn.android.tool.AttrUtils;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

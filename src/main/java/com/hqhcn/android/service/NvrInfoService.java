@@ -1,8 +1,8 @@
 package com.hqhcn.android.service;
 
 
-import com.hqh.android.entity.NvrInfo;
-import com.hqh.android.entity.NvrInfoExample;
+import com.hqhcn.android.entity.NvrInfo;
+import com.hqhcn.android.entity.NvrInfoExample;
 
 import java.util.List;
 

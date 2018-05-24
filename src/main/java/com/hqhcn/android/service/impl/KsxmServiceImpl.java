@@ -1,12 +1,12 @@
 package com.hqhcn.android.service.impl;
 
 
-import com.hqh.android.dao.KsxmMapper;
-import com.hqh.android.entity.Ksld;
-import com.hqh.android.entity.Ksxm;
-import com.hqh.android.entity.KsxmExample;
-import com.hqh.android.service.KsldService;
-import com.hqh.android.service.KsxmService;
+import com.hqhcn.android.dao.KsxmMapper;
+import com.hqhcn.android.entity.Ksld;
+import com.hqhcn.android.entity.Ksxm;
+import com.hqhcn.android.entity.KsxmExample;
+import com.hqhcn.android.service.KsldService;
+import com.hqhcn.android.service.KsxmService;
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

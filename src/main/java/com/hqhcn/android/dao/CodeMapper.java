@@ -1,9 +1,9 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Code;
-import com.hqh.android.entity.CodeExample;
-import com.hqh.android.entity.CodeKey;
-import com.hqh.android.entity.CodeWithBLOBs;
+import com.hqhcn.android.entity.Code;
+import com.hqhcn.android.entity.CodeExample;
+import com.hqhcn.android.entity.CodeKey;
+import com.hqhcn.android.entity.CodeWithBLOBs;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

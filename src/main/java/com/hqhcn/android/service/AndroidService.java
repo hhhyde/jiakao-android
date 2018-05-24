@@ -1,16 +1,15 @@
 package com.hqhcn.android.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hqh.android.cache.RedisCache;
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.entity.ExamKf;
-import com.hqh.android.entity.Exampreasign;
-import com.hqh.android.entity.Ksxm;
-import com.hqh.android.tool.DateTools;
-import com.hqh.android.tool.LogType;
-import com.hqh.android.tool.ResultUtils;
-import com.hqh.android.web.InitLoad;
-import com.hqh.android.webservice.TmriInvoker;
+import com.hqhcn.android.cache.RedisCache;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.entity.ExamKf;
+import com.hqhcn.android.entity.Exampreasign;
+import com.hqhcn.android.entity.Ksxm;
+import com.hqhcn.android.tool.DateTools;
+import com.hqhcn.android.tool.ResultUtils;
+import com.hqhcn.android.web.InitLoad;
+import com.hqhcn.android.webservice.TmriInvoker;
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.time.DateUtils;

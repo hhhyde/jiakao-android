@@ -1,11 +1,10 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.UsersMapper;
-import com.hqh.android.entity.Users;
-import com.hqh.android.entity.UsersExample;
-import com.hqh.android.service.UsersService;
+import com.hqhcn.android.dao.UsersMapper;
+import com.hqhcn.android.entity.Users;
+import com.hqhcn.android.entity.UsersExample;
+import com.hqhcn.android.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 

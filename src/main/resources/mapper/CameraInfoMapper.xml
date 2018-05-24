@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.CameraInfoMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.CameraInfo">
+<mapper namespace="com.hqhcn.android.dao.CameraInfoMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.CameraInfo">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="ip" jdbcType="VARCHAR" property="ip" />
@@ -76,7 +76,7 @@
   <sql id="Base_Column_List">
     id, name, ip, port, account, password, kskm, ksld, ksxm, nvr_id, nvr_channel, bz
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.CameraInfoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.CameraInfoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -101,13 +101,13 @@
     delete from camera_info
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.CameraInfoExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.CameraInfoExample">
     delete from camera_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.CameraInfo">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.CameraInfo">
     insert into camera_info (id, name, ip,
     port, account, password,
     kskm, ksld, ksxm, nvr_id,
@@ -117,7 +117,7 @@
     #{kskm,jdbcType=VARCHAR}, #{ksld,jdbcType=VARCHAR}, #{ksxm,jdbcType=VARCHAR}, #{nvrId,jdbcType=VARCHAR},
     #{nvrChannel,jdbcType=VARCHAR}, #{bz,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.CameraInfo">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.CameraInfo">
     insert into camera_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -196,7 +196,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.CameraInfoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.CameraInfoExample" resultType="java.lang.Long">
     select count(*) from camera_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -264,7 +264,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.CameraInfo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.CameraInfo">
     update camera_info
     <set>
       <if test="name != null">
@@ -303,7 +303,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.CameraInfo">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.CameraInfo">
     update camera_info
     set name = #{name,jdbcType=VARCHAR},
     ip = #{ip,jdbcType=VARCHAR},
@@ -320,7 +320,7 @@
   </update>
 
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.CameraInfoExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.CameraInfoExample" resultMap="BaseResultMap">
     select * from camera_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

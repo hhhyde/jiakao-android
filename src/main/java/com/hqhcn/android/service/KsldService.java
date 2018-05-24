@@ -1,8 +1,8 @@
 package com.hqhcn.android.service;
 
 
-import com.hqh.android.entity.Ksld;
-import com.hqh.android.entity.KsldExample;
+import com.hqhcn.android.entity.Ksld;
+import com.hqhcn.android.entity.KsldExample;
 
 import java.util.List;
 

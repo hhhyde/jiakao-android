@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.ExamprocMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Examproc">
+<mapper namespace="com.hqhcn.android.dao.ExamprocMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Examproc">
     <id column="lsh" jdbcType="VARCHAR" property="lsh"/>
     <id column="kscs" jdbcType="DECIMAL" property="kscs"/>
     <id column="ksxm" jdbcType="VARCHAR" property="ksxm"/>
@@ -76,7 +76,7 @@
   <sql id="Base_Column_List">
     lsh, kscs, ksxm, kskm, kscj, kszt, jlcxh, pic1, pic2, kssj, jssj, jyw
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.ExamprocExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.ExamprocExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -91,7 +91,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.hqh.android.entity.ExamprocKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="com.hqhcn.android.entity.ExamprocKey" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from examproc
@@ -99,19 +99,19 @@
     and kscs = #{kscs,jdbcType=DECIMAL}
     and ksxm = #{ksxm,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.hqh.android.entity.ExamprocKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.hqhcn.android.entity.ExamprocKey">
     delete from examproc
     where lsh = #{lsh,jdbcType=VARCHAR}
     and kscs = #{kscs,jdbcType=DECIMAL}
     and ksxm = #{ksxm,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.ExamprocExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.ExamprocExample">
     delete from examproc
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Examproc">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Examproc">
     insert into examproc (lsh, kscs, ksxm,
     kskm, kscj, kszt, jlcxh,
     pic1, pic2, kssj,
@@ -121,7 +121,7 @@
     #{pic1,jdbcType=VARCHAR}, #{pic2,jdbcType=VARCHAR}, #{kssj,jdbcType=TIMESTAMP},
     #{jssj,jdbcType=TIMESTAMP}, #{jyw,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Examproc">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Examproc">
     insert into examproc
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="lsh != null">
@@ -200,7 +200,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.ExamprocExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.ExamprocExample" resultType="java.lang.Long">
     select count(*) from examproc
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -268,7 +268,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Examproc">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Examproc">
     update examproc
     <set>
       <if test="kskm != null">
@@ -303,7 +303,7 @@
     and kscs = #{kscs,jdbcType=DECIMAL}
     and ksxm = #{ksxm,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Examproc">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Examproc">
     update examproc
     set kskm = #{kskm,jdbcType=VARCHAR},
     kscj = #{kscj,jdbcType=DECIMAL},

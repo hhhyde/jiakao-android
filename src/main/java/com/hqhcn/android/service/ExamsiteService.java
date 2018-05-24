@@ -1,7 +1,7 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.Examsite;
-import com.hqh.android.entity.ExamsiteExample;
+import com.hqhcn.android.entity.Examsite;
+import com.hqhcn.android.entity.ExamsiteExample;
 
 import java.util.List;
 import java.util.Map;

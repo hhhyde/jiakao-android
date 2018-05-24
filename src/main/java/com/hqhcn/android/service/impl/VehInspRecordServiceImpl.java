@@ -1,11 +1,11 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.VehInspRecordMapper;
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.entity.VehInspRecord;
-import com.hqh.android.entity.VehInspRecordExample;
-import com.hqh.android.service.CarinfoService;
-import com.hqh.android.service.VehInspRecordService;
+import com.hqhcn.android.dao.VehInspRecordMapper;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.entity.VehInspRecord;
+import com.hqhcn.android.entity.VehInspRecordExample;
+import com.hqhcn.android.service.CarinfoService;
+import com.hqhcn.android.service.VehInspRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

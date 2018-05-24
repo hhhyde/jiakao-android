@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.LogMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Log">
+<mapper namespace="com.hqhcn.android.dao.LogMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Log">
     <result column="user_code" jdbcType="VARCHAR" property="userCode" />
     <result column="program" jdbcType="VARCHAR" property="program" />
     <result column="cz" jdbcType="VARCHAR" property="cz" />
@@ -76,7 +76,7 @@
   <sql id="Base_Column_List">
     user_code, program, cz, xxsm, czip, jmw, id, logtype, f1, f2, f3, czsj
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.LogExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.LogExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -91,13 +91,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.LogExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.LogExample">
     delete from log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Log">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Log">
     insert into log (user_code, program, cz,
     xxsm, czip, jmw, id,
     logtype, f1, f2, f3,
@@ -107,7 +107,7 @@
     #{logtype,jdbcType=VARCHAR}, #{f1,jdbcType=VARCHAR}, #{f2,jdbcType=VARCHAR}, #{f3,jdbcType=VARCHAR},
     #{czsj,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Log">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Log">
     insert into log
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userCode != null">
@@ -186,7 +186,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.LogExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.LogExample" resultType="java.lang.Long">
     select count(*) from log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -255,7 +255,7 @@
     </if>
   </update>
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.LogExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.LogExample" resultMap="BaseResultMap">
     select * from  log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

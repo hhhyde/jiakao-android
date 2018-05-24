@@ -1,11 +1,11 @@
 package com.hqhcn.android.service.impl;
 
 
-import com.hqh.android.dao.LogMapper;
-import com.hqh.android.entity.Log;
-import com.hqh.android.entity.LogExample;
-import com.hqh.android.service.LogService;
-import com.hqh.android.tool.LogType;
+import com.hqhcn.android.dao.LogMapper;
+import com.hqhcn.android.entity.Log;
+import com.hqhcn.android.entity.LogExample;
+import com.hqhcn.android.service.LogService;
+import com.hqhcn.android.tool.LogType;
 import org.apache.commons.lang.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

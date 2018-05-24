@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.CarmodelMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Carmodel">
+<mapper namespace="com.hqhcn.android.dao.CarmodelMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Carmodel">
     <id column="kcdddh" jdbcType="VARCHAR" property="kcdddh" />
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="clppxh" jdbcType="VARCHAR" property="clppxh" />
@@ -69,7 +69,7 @@
   <sql id="Base_Column_List">
     kcdddh, id, clppxh, model_path, pic
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.CarmodelExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.CarmodelExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -84,31 +84,31 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.hqh.android.entity.CarmodelKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="com.hqhcn.android.entity.CarmodelKey" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from carmodel
     where kcdddh = #{kcdddh,jdbcType=VARCHAR}
     and id = #{id,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.hqh.android.entity.CarmodelKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.hqhcn.android.entity.CarmodelKey">
     delete from carmodel
     where kcdddh = #{kcdddh,jdbcType=VARCHAR}
     and id = #{id,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.CarmodelExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.CarmodelExample">
     delete from carmodel
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Carmodel">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Carmodel">
     insert into carmodel (kcdddh, id, clppxh,
     model_path, pic)
     values (#{kcdddh,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, #{clppxh,jdbcType=VARCHAR},
     #{modelPath,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Carmodel">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Carmodel">
     insert into carmodel
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="kcdddh != null">
@@ -145,7 +145,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.CarmodelExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.CarmodelExample" resultType="java.lang.Long">
     select count(*) from carmodel
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -185,7 +185,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Carmodel">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Carmodel">
     update carmodel
     <set>
       <if test="clppxh != null">
@@ -201,7 +201,7 @@
     where kcdddh = #{kcdddh,jdbcType=VARCHAR}
     and id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Carmodel">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Carmodel">
     update carmodel
     set clppxh = #{clppxh,jdbcType=VARCHAR},
     model_path = #{modelPath,jdbcType=VARCHAR},
@@ -210,7 +210,7 @@
     and id = #{id,jdbcType=VARCHAR}
   </update>
 
-  <select id="selectCLPPXHByExample" parameterType="com.hqh.android.entity.CarmodelExample" resultType="java.lang.String">
+  <select id="selectCLPPXHByExample" parameterType="com.hqhcn.android.entity.CarmodelExample" resultType="java.lang.String">
     select CLPPXH from CARMODEL
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -220,7 +220,7 @@
     </if>
   </select>
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.CarmodelExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.CarmodelExample" resultMap="BaseResultMap">
     select * from carmodel
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

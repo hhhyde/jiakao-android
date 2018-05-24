@@ -1,7 +1,7 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.Examproc;
-import com.hqh.android.entity.ExamprocExample;
+import com.hqhcn.android.entity.Examproc;
+import com.hqhcn.android.entity.ExamprocExample;
 
 import java.util.Date;
 import java.util.List;

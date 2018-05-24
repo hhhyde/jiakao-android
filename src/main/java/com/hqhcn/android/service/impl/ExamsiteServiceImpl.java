@@ -1,12 +1,12 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.ExamsiteMapper;
-import com.hqh.android.entity.Examsite;
-import com.hqh.android.entity.ExamsiteExample;
-import com.hqh.android.entity.Ksld;
-import com.hqh.android.entity.KsldExample;
-import com.hqh.android.service.ExamsiteService;
-import com.hqh.android.service.KsldService;
+import com.hqhcn.android.dao.ExamsiteMapper;
+import com.hqhcn.android.entity.Examsite;
+import com.hqhcn.android.entity.ExamsiteExample;
+import com.hqhcn.android.entity.Ksld;
+import com.hqhcn.android.entity.KsldExample;
+import com.hqhcn.android.service.ExamsiteService;
+import com.hqhcn.android.service.KsldService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

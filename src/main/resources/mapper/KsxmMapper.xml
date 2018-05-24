@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.KsxmMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Ksxm">
+<mapper namespace="com.hqhcn.android.dao.KsxmMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Ksxm">
     <id column="code" jdbcType="VARCHAR" property="code" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="up_code" jdbcType="VARCHAR" property="upCode" />
@@ -72,7 +72,7 @@
   <sql id="Base_Column_List">
     code, name, up_code, kfz, kskm, zdpdx, code61, zt
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.KsxmExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.KsxmExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -97,13 +97,13 @@
     delete from ksxm
     where code = #{code,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.KsxmExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.KsxmExample">
     delete from ksxm
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Ksxm">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Ksxm">
     insert into ksxm (code, name, up_code,
     kfz, kskm, zdpdx, code61,
     zt)
@@ -111,7 +111,7 @@
     #{kfz,jdbcType=VARCHAR}, #{kskm,jdbcType=VARCHAR}, #{zdpdx,jdbcType=DECIMAL}, #{code61,jdbcType=VARCHAR},
     #{zt,jdbcType=DECIMAL})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Ksxm">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Ksxm">
     insert into ksxm
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="code != null">
@@ -166,7 +166,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.KsxmExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.KsxmExample" resultType="java.lang.Long">
     select count(*) from ksxm
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -218,7 +218,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Ksxm">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Ksxm">
     update ksxm
     <set>
       <if test="name != null">
@@ -245,7 +245,7 @@
     </set>
     where code = #{code,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Ksxm">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Ksxm">
     update ksxm
     set name = #{name,jdbcType=VARCHAR},
     up_code = #{upCode,jdbcType=VARCHAR},
@@ -258,7 +258,7 @@
   </update>
 
 
-  <select id="selectCodeByExample" parameterType="com.hqh.android.entity.KsxmExample" resultType="java.lang.String">
+  <select id="selectCodeByExample" parameterType="com.hqhcn.android.entity.KsxmExample" resultType="java.lang.String">
     select code from ksxm
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -268,7 +268,7 @@
     </if>
   </select>
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.KsxmExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.KsxmExample" resultMap="BaseResultMap">
     select * from  ksxm
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -279,7 +279,7 @@
     limit #{start,jdbcType=DECIMAL},#{limit,jdbcType=DECIMAL}
   </select>
 
-  <select id="selectCodeNameByExample" parameterType="com.hqh.android.entity.KsxmExample" resultMap="BaseResultMap">
+  <select id="selectCodeNameByExample" parameterType="com.hqhcn.android.entity.KsxmExample" resultMap="BaseResultMap">
     select code,name from ksxm
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

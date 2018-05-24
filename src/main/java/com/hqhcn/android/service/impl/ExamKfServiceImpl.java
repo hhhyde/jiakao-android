@@ -1,14 +1,14 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.ExamKfMapper;
-import com.hqh.android.entity.ExamKf;
-import com.hqh.android.entity.ExamKfExample;
-import com.hqh.android.entity.Exampreasign;
-import com.hqh.android.service.ExamKfService;
-import com.hqh.android.service.ExamProcService;
-import com.hqh.android.service.ExamineeService;
-import com.hqh.android.tool.AttrUtils;
-import com.hqh.android.tool.hikvision.DvrPicHelper;
+import com.hqhcn.android.dao.ExamKfMapper;
+import com.hqhcn.android.entity.ExamKf;
+import com.hqhcn.android.entity.ExamKfExample;
+import com.hqhcn.android.entity.Exampreasign;
+import com.hqhcn.android.service.ExamKfService;
+import com.hqhcn.android.service.ExamProcService;
+import com.hqhcn.android.service.ExamineeService;
+import com.hqhcn.android.tool.AttrUtils;
+import com.hqhcn.android.tool.hikvision.DvrPicHelper;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

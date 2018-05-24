@@ -1,9 +1,9 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.NvrInfoMapper;
-import com.hqh.android.entity.NvrInfo;
-import com.hqh.android.entity.NvrInfoExample;
-import com.hqh.android.service.NvrInfoService;
+import com.hqhcn.android.dao.NvrInfoMapper;
+import com.hqhcn.android.entity.NvrInfo;
+import com.hqhcn.android.entity.NvrInfoExample;
+import com.hqhcn.android.service.NvrInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

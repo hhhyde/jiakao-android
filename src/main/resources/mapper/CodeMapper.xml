@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.CodeMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Code">
+<mapper namespace="com.hqhcn.android.dao.CodeMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Code">
     <id column="XTLB" jdbcType="CHAR" property="xtlb" />
     <id column="DMLB" jdbcType="VARCHAR" property="dmlb" />
     <id column="DMZ" jdbcType="VARCHAR" property="dmz" />
@@ -12,7 +12,7 @@
     <result column="CSBJ" jdbcType="CHAR" property="csbj" />
     <result column="GXSJ" jdbcType="TIMESTAMP" property="gxsj" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hqh.android.entity.CodeWithBLOBs">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hqhcn.android.entity.CodeWithBLOBs">
     <result column="DMSM1" jdbcType="LONGVARCHAR" property="dmsm1" />
     <result column="DMSM2" jdbcType="LONGVARCHAR" property="dmsm2" />
     <result column="DMSM3" jdbcType="LONGVARCHAR" property="dmsm3" />
@@ -82,7 +82,7 @@
   <sql id="Blob_Column_List">
     DMSM1, DMSM2, DMSM3, DMSM4
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.hqh.android.entity.CodeExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.hqhcn.android.entity.CodeExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -99,7 +99,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.CodeExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.CodeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -114,7 +114,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.hqh.android.entity.CodeKey" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="com.hqhcn.android.entity.CodeKey" resultMap="ResultMapWithBLOBs">
     select
     <include refid="Base_Column_List" />
     ,
@@ -124,19 +124,19 @@
     and DMLB = #{dmlb,jdbcType=VARCHAR}
     and DMZ = #{dmz,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.hqh.android.entity.CodeKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.hqhcn.android.entity.CodeKey">
     delete from code
     where XTLB = #{xtlb,jdbcType=CHAR}
     and DMLB = #{dmlb,jdbcType=VARCHAR}
     and DMZ = #{dmz,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.CodeExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.CodeExample">
     delete from code
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.CodeWithBLOBs">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.CodeWithBLOBs">
     insert into code (XTLB, DMLB, DMZ,
     DMSX, SXH, YWDX, ZT,
     CSBJ, GXSJ, DMSM1,
@@ -148,7 +148,7 @@
     #{dmsm2,jdbcType=LONGVARCHAR}, #{dmsm3,jdbcType=LONGVARCHAR}, #{dmsm4,jdbcType=LONGVARCHAR}
     )
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.CodeWithBLOBs">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.CodeWithBLOBs">
     insert into code
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="xtlb != null">
@@ -233,7 +233,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.CodeExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.CodeExample" resultType="java.lang.Long">
     select count(*) from code
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -320,7 +320,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.CodeWithBLOBs">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.CodeWithBLOBs">
     update code
     <set>
       <if test="dmsx != null">
@@ -358,7 +358,7 @@
     and DMLB = #{dmlb,jdbcType=VARCHAR}
     and DMZ = #{dmz,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.hqh.android.entity.CodeWithBLOBs">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.hqhcn.android.entity.CodeWithBLOBs">
     update code
     set DMSX = #{dmsx,jdbcType=CHAR},
     SXH = #{sxh,jdbcType=DECIMAL},
@@ -374,7 +374,7 @@
     and DMLB = #{dmlb,jdbcType=VARCHAR}
     and DMZ = #{dmz,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Code">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Code">
     update code
     set DMSX = #{dmsx,jdbcType=CHAR},
     SXH = #{sxh,jdbcType=DECIMAL},
@@ -386,7 +386,7 @@
     and DMLB = #{dmlb,jdbcType=VARCHAR}
     and DMZ = #{dmz,jdbcType=VARCHAR}
   </update>
-  <select id="loadCodeMap" parameterType="com.hqh.android.entity.CodeExample" resultType="java.util.Map">
+  <select id="loadCodeMap" parameterType="com.hqhcn.android.entity.CodeExample" resultType="java.util.Map">
     select XTLB,DMLB,DMZ,DMSM1 from code order by DMLB,DMZ
   </select>
 

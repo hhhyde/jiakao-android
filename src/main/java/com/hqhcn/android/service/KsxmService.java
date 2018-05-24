@@ -1,8 +1,8 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.Ksld;
-import com.hqh.android.entity.Ksxm;
-import com.hqh.android.entity.KsxmExample;
+import com.hqhcn.android.entity.Ksld;
+import com.hqhcn.android.entity.Ksxm;
+import com.hqhcn.android.entity.KsxmExample;
 
 import java.util.List;
 import java.util.Map;

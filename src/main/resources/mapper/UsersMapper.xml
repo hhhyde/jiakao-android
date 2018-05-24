@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqh.android.dao.UsersMapper">
-  <resultMap id="BaseResultMap" type="com.hqh.android.entity.Users">
+<mapper namespace="com.hqhcn.android.dao.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.hqhcn.android.entity.Users">
     <id column="user_code" jdbcType="VARCHAR" property="userCode" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
@@ -105,7 +105,7 @@
     issue_unit, audit_opinion, department_code, job_status, born_date, create_date, last_login_time,
     last_modify, over_date
   </sql>
-  <select id="selectByExample" parameterType="com.hqh.android.entity.UsersExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hqhcn.android.entity.UsersExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -130,13 +130,13 @@
     delete from users
     where user_code = #{userCode,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hqh.android.entity.UsersExample">
+  <delete id="deleteByExample" parameterType="com.hqhcn.android.entity.UsersExample">
     delete from users
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hqh.android.entity.Users">
+  <insert id="insert" parameterType="com.hqhcn.android.entity.Users">
     insert into users (user_code, user_name, nick_name,
     password, user_gender, userstat,
     carid, sign_type, dept_code,
@@ -162,7 +162,7 @@
     #{bornDate,jdbcType=TIMESTAMP}, #{createDate,jdbcType=TIMESTAMP}, #{lastLoginTime,jdbcType=TIMESTAMP},
     #{lastModify,jdbcType=TIMESTAMP}, #{overDate,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqh.android.entity.Users">
+  <insert id="insertSelective" parameterType="com.hqhcn.android.entity.Users">
     insert into users
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userCode != null">
@@ -391,7 +391,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hqh.android.entity.UsersExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hqhcn.android.entity.UsersExample" resultType="java.lang.Long">
     select count(*) from users
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -559,7 +559,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqh.android.entity.Users">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqhcn.android.entity.Users">
     update users
     <set>
       <if test="userName != null">
@@ -673,7 +673,7 @@
     </set>
     where user_code = #{userCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqh.android.entity.Users">
+  <update id="updateByPrimaryKey" parameterType="com.hqhcn.android.entity.Users">
     update users
     set user_name = #{userName,jdbcType=VARCHAR},
     nick_name = #{nickName,jdbcType=VARCHAR},
@@ -714,7 +714,7 @@
     where user_code = #{userCode,jdbcType=VARCHAR}
   </update>
 
-  <select id="selectByExampleToPage" parameterType="com.hqh.android.entity.UsersExample" resultMap="BaseResultMap">
+  <select id="selectByExampleToPage" parameterType="com.hqhcn.android.entity.UsersExample" resultMap="BaseResultMap">
     select * from  users
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

@@ -1,7 +1,7 @@
 package com.hqhcn.android.service;
 
-import com.hqh.android.entity.MonitorPolicy;
-import com.hqh.android.entity.MonitorPolicyExample;
+import com.hqhcn.android.entity.MonitorPolicy;
+import com.hqhcn.android.entity.MonitorPolicyExample;
 
 import java.util.List;
 

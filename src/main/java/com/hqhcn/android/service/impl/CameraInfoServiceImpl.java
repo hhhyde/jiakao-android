@@ -1,9 +1,9 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.CameraInfoMapper;
-import com.hqh.android.entity.CameraInfo;
-import com.hqh.android.entity.CameraInfoExample;
-import com.hqh.android.service.CameraInfoService;
+import com.hqhcn.android.dao.CameraInfoMapper;
+import com.hqhcn.android.entity.CameraInfo;
+import com.hqhcn.android.entity.CameraInfoExample;
+import com.hqhcn.android.service.CameraInfoService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

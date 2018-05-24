@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.ExamKf;
-import com.hqh.android.entity.ExamKfExample;
+import com.hqhcn.android.entity.ExamKf;
+import com.hqhcn.android.entity.ExamKfExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

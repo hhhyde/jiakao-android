@@ -1,7 +1,7 @@
 package com.hqhcn.android.service.impl;
 
-import com.hqh.android.dao.CodeMapper;
-import com.hqh.android.service.CodeService;
+import com.hqhcn.android.dao.CodeMapper;
+import com.hqhcn.android.service.CodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

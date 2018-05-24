@@ -1,15 +1,15 @@
 package com.hqhcn.android.tool.hikvision;
 
 
-import com.hqh.android.entity.CameraInfo;
-import com.hqh.android.entity.Carinfo;
-import com.hqh.android.entity.Ksld;
-import com.hqh.android.entity.NvrInfo;
-import com.hqh.android.service.CameraInfoService;
-import com.hqh.android.service.CarinfoService;
-import com.hqh.android.service.KsldService;
-import com.hqh.android.tool.AttrUtils;
-import com.hqh.android.web.InitLoad;
+import com.hqhcn.android.entity.CameraInfo;
+import com.hqhcn.android.entity.Carinfo;
+import com.hqhcn.android.entity.Ksld;
+import com.hqhcn.android.entity.NvrInfo;
+import com.hqhcn.android.service.CameraInfoService;
+import com.hqhcn.android.service.CarinfoService;
+import com.hqhcn.android.service.KsldService;
+import com.hqhcn.android.tool.AttrUtils;
+import com.hqhcn.android.web.InitLoad;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

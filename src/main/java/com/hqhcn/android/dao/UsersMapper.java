@@ -1,7 +1,7 @@
 package com.hqhcn.android.dao;
 
-import com.hqh.android.entity.Users;
-import com.hqh.android.entity.UsersExample;
+import com.hqhcn.android.entity.Users;
+import com.hqhcn.android.entity.UsersExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
