@@ -369,7 +369,7 @@ public class AndroidController extends BaseController {
         }
         List<Exampreasign> assigns = new ArrayList<>();
         try {
-            assigns = examineeService.pull(carinfo.getJlcxh(), carinfo.getKskm());
+            assigns = carinfoService.pull(carinfo.getJlcxh(), carinfo.getKskm());
         } catch (Exception e) {
             logger.error("获取考生列表失败", e);
             return ResultUtils.failure(e.getMessage());

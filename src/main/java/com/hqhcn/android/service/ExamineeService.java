@@ -196,4 +196,6 @@ public interface ExamineeService {
      */
     List<Exampreasign> queryBySfzmhmToday(String sfzmhm);
 
+    public void updateByExampleSelective(Exampreasign entity, ExampreasignExample example);
+
 }

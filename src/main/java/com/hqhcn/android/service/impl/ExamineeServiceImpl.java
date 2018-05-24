@@ -170,6 +170,7 @@ public class ExamineeServiceImpl implements ExamineeService {
         mapper.insert(entity);
     }
 
+    @Override
     public void updateByExampleSelective(Exampreasign entity, ExampreasignExample example) {
         String jyw = "";
         try {

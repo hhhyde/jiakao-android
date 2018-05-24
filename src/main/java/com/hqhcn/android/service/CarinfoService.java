@@ -2,6 +2,7 @@ package com.hqhcn.android.service;
 
 import com.hqhcn.android.entity.Carinfo;
 import com.hqhcn.android.entity.CarinfoExample;
+import com.hqhcn.android.entity.Exampreasign;
 
 import java.util.List;
 
@@ -80,5 +81,7 @@ public interface CarinfoService {
      * @param jlcxh 教练车序号
      */
     void breakdown(String jlcxh);
+
+    List<Exampreasign> pull(String jlcxh, String jlc_kskm) throws Exception;
 
 }
