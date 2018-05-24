@@ -70,7 +70,7 @@ logging:
   config: classpath:logback-spring.xml
 mybatis:
   config-location: classpath:mybatis/mybatis-configuration.xml
-  type-aliases-package: com.hqh.android.entity
+  type-aliases-package: com.hqhcn.android.entity
   mapper-locations: classpath:mapper/*.xml
 management:
   security:
