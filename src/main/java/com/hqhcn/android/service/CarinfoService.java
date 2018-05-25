@@ -82,6 +82,6 @@ public interface CarinfoService {
      */
     void breakdown(String jlcxh);
 
-    List<Exampreasign> pull(String jlcxh, String jlc_kskm) throws Exception;
+
 
 }
