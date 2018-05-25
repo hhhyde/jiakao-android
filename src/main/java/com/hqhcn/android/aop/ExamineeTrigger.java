@@ -55,7 +55,7 @@ public class ExamineeTrigger {
     /**
      * 切入com.hqh.service.impl.ExamineeServiceImpl类下的<code>所有update开头</code>和<code>insert</code>方法
      */
-    @Pointcut("execution(* com.hqhcn.android.service.impl.ExamineeServiceImpl.update*(..))  || execution(* com.hqhcn.android.service.impl.ExamineeServiceImpl.insert(..)) || execution(* com.hqhcn.android.service.impl.CarinfoServiceImpl.updateByLSH(..))")
+    @Pointcut("execution(* com.hqhcn.android.dao.ExampreasignMapper.update*(..))")
     public void statusPoint() {
 
     }

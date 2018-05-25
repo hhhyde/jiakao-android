@@ -2,7 +2,6 @@ package com.hqhcn.android.service;
 
 import com.hqhcn.android.entity.Carinfo;
 import com.hqhcn.android.entity.CarinfoExample;
-import com.hqhcn.android.entity.Exampreasign;
 
 import java.util.List;
 
@@ -82,6 +81,6 @@ public interface CarinfoService {
      */
     void breakdown(String jlcxh);
 
-    void updateByLSH(Exampreasign exampreasign);
+
 
 }

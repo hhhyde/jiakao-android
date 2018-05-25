@@ -14,6 +14,7 @@ import com.hqhcn.android.tool.AttrUtils;
 import com.hqhcn.android.tool.DateTools;
 import com.hqhcn.android.web.InitLoad;
 import com.hqhcn.android.webservice.TmriInvoker;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.time.DateUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -231,9 +232,13 @@ public class ExamineeServiceImpl implements ExamineeService {
                     .andJlcxhEqualTo(jlcxh)
                     .andZtEqualTo(ZT_EXAMEND)
                     .andYkrqEqualTo(DateTools.toDate(DateTools.getYMD(), DateTools.yyyyMMdd));
-            Exampreasign exampreasign9 = new Exampreasign();
-            exampreasign9.setZt(ZT_EXAMENDOUTCAR);
-            updateByExampleSelective(exampreasign9, example8);
+            List<Exampreasign> exampreasigns = mapper.selectByExample(example8);
+            if(CollectionUtils.isNotEmpty(exampreasigns)){
+                for (Exampreasign exampreasign9 : exampreasigns ){
+                    exampreasign9.setZt(ZT_EXAMENDOUTCAR);
+                    updateByExampleSelective(exampreasign9, example8);
+                }
+            }
 
             // 2. 拿到全部 <已分配到该车待考> 的考生, 状态设置成  <已上车>
             ExampreasignExample example3 = new ExampreasignExample();
@@ -299,7 +304,7 @@ public class ExamineeServiceImpl implements ExamineeService {
                     exampreasign2.get(i).setKsy1(carinfo.getPky());
                     exampreasign2.get(i).setKcdddh(carinfo.getKcdddh());
 
-                    carinfoService.updateByLSH(exampreasign2.get(i));
+                    updateByLSH(exampreasign2.get(i));
                 } else {
                     continue;
                 }
