@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.concurrent.ListenableFutureCallback;
@@ -20,7 +21,11 @@ import org.springframework.web.client.AsyncRestTemplate;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * @author 柯江涛
@@ -68,13 +73,35 @@ public class ExamineeTrigger {
         Exampreasign exampreasign = examineeService.queryByLsh(lsh);
         try {
             Object result = pjp.proceed();
-            if(null != exampreasign && exampreasign.getZt()>=2){
+            if (null != exampreasign && exampreasign.getZt() >= 2) {
                 pushToLED(lsh);
             }
             return result;
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    /**
+     * 切入com.hqh.service.impl.ExamineeServiceImpl类下的<code>所有update开头</code>和<code>insert</code>方法
+     */
+    @Pointcut("execution(* com.hqhcn.android.service.impl.ExamineeServiceImpl.pull(..))")
+    public void pullPoint() {
+
+    }
+
+    @Around("pullPoint()")
+    public Object pullHandler(ProceedingJoinPoint pjp) throws Throwable {
+
+        Object result = pjp.proceed();
+        if (result instanceof List) {
+            List<Exampreasign> objectList = (List<Exampreasign>) result;
+            objectList.stream()
+                    .filter(Objects::nonNull)
+                    .filter(s -> s instanceof Exampreasign)
+                    .forEach(e -> pushToLED(e.getLsh()));
+        }
+        return result;
     }
 
 
