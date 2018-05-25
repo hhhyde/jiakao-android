@@ -299,7 +299,7 @@ public class ExamineeServiceImpl implements ExamineeService {
                     exampreasign2.get(i).setKsy1(carinfo.getPky());
                     exampreasign2.get(i).setKcdddh(carinfo.getKcdddh());
 
-                    updateByLSH(exampreasign2.get(i));
+                    carinfoService.updateByLSH(exampreasign2.get(i));
                 } else {
                     continue;
                 }

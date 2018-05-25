@@ -18,6 +18,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -153,6 +156,19 @@ public class CarinfoServiceImpl implements CarinfoService {
         examineeService.update(Exampreasign34, example34);
     }
 
-
+    @Override
+    public void updateByLSH(Exampreasign exampreasign) {
+        String jyw = "";
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            // TODO: 2018/1/22 0022 没有序列化
+            md.update(exampreasign.toString().getBytes());
+            jyw = new BigInteger(1, md.digest()).toString(16);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        exampreasign.setJmw(jyw);
+        exampreasignMapper.updateByPrimaryKey(exampreasign);
+    }
 
 }

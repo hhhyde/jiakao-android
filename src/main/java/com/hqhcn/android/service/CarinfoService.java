@@ -82,6 +82,6 @@ public interface CarinfoService {
      */
     void breakdown(String jlcxh);
 
-
+    void updateByLSH(Exampreasign exampreasign);
 
 }
